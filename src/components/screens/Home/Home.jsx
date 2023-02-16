@@ -34,7 +34,7 @@ const Home = () => {
 	return (
 		<div className='text-white mx-auto'>
 			<h1 className='text-4xl font-bold text-center mb-10'>ToDo App</h1>
-			{todos.map(todo => (
+			{todo.map(todo => (
 				<TodoItem
 					key={todo._id}
 					todo={todo}

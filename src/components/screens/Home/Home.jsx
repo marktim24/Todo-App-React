@@ -1,3 +1,4 @@
+import CreateTodo from './create-todo/CreateTodo'
 import TodoItem from './item/TodoItem'
 import React, { useState } from 'react'
 
@@ -42,6 +43,7 @@ const Home = () => {
 					removeTodo={removeTodo}
 				/>
 			))}
+			<CreateTodo setTodo={setTodo} />
 		</div>
 	)
 }

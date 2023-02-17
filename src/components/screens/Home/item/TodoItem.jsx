@@ -5,9 +5,7 @@ import { TbTrash } from 'react-icons/tb'
 
 const TodoItem = ({ todo, changeTodo, removeTodo }) => {
 	return (
-		<div
-			className={`flex items-center justify-between mb-2.5 p-4 w-full bg-gray-800 rounded-xl outline-none`}
-		>
+		<div className='flex items-center justify-between mb-2.5 p-4 w-full bg-gray-800 rounded-xl outline-none'>
 			<button
 				className='flex items-center'
 				onClick={() => changeTodo(todo._id)}

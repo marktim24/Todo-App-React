@@ -1,3 +1,4 @@
+import CreateTodo from './create-todo/CreateTodo'
 import TodoItem from './item/TodoItem'
 import React, { useState } from 'react'
 
@@ -23,13 +24,13 @@ const Home = () => {
 	const [todo, setTodo] = useState(todos)
 
 	const checkTodo = id => {
-		const copy = [...todos]
+		const copy = [...todo]
 		const current = copy.find(check => check._id === id)
 		current.isCompleted = !current.isCompleted
 		setTodo(copy)
 	}
 
-	const removeTodo = id => setTodo([...todos].filter(check => check._id !== id))
+	const removeTodo = id => setTodo([...todo].filter(check => check._id !== id))
 
 	return (
 		<div className='text-white mx-auto'>
@@ -42,7 +43,7 @@ const Home = () => {
 					removeTodo={removeTodo}
 				/>
 			))}
-			{/* Компонент <CreateTodo с параметром setTodo={setTodo} /> */}
+			<CreateTodo setTodo={setTodo} />
 		</div>
 	)
 }

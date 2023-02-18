@@ -15,7 +15,7 @@ const TodoItem = ({ todo, changeTodo, removeTodo }) => {
 					{todo.title}
 				</span>
 			</button>
-			<button>
+			<button onClick={() => removeTodo(todo._id)}>
 				<TbTrash
 					size={24}
 					className='text-gray-600 hover:text-purple-500 transition-colors ease-in-out duration-300'

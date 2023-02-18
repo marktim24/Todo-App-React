@@ -38,8 +38,8 @@ const Home = () => {
 				<TodoItem
 					key={todo._id}
 					todo={todo}
-					changeTodo={changeTodo}
-					removeTodo={checkTodo}
+					changeTodo={checkTodo}
+					removeTodo={removeTodo}
 				/>
 			))}
 			{/* Компонент <CreateTodo с параметром setTodo={setTodo} /> */}
